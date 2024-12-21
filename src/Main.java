@@ -8,9 +8,21 @@ public class Main {
         stack.add(30); // 30 will be added after 70
         stack.add(56); // 56 will be added at last so according to LIFO it is on top
 
-        // Print the stack
-        System.out.println("Stack Sequence, after Push() (.add() of LinkedList)");
-        stack.printStack(); // Output: 56 30 70
+        // Printing the Stack
+        stack.printStack();
+        System.out.println("Top of the stack: " + stack.peek());
+        stack.pop();
+        System.out.println("Top Popped using pop()");
+
+        System.out.println("Top element of the stack: " + stack.peek());
+        stack.pop();
+        System.out.println("Top Popped using pop()");
+
+        System.out.println("Top of the stack: " + stack.peek());
+        stack.pop();
+        System.out.println("Top Popped using pop()");
+
+        System.out.println("Top of the stack: " + stack.peek());
 
     }
 }
