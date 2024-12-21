@@ -1,28 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        LinkedList stack = new LinkedList();
+        // STACK
+        // LinkedList stack = new LinkedList();
+        // stack.add(70); // 70 will be added first
+        // stack.add(30); // 30 will be added after 70
+        // stack.add(56); // 56 will be added at last so according to LIFO
 
-        // Pushing elements onto the stack
-        // Here we used .add()
-        stack.add(70); // 70 will be added first
-        stack.add(30); // 30 will be added after 70
-        stack.add(56); // 56 will be added at last so according to LIFO it is on top
-
-        // Printing the Stack
-        stack.printStack();
-        System.out.println("Top of the stack: " + stack.peek());
-        stack.pop();
-        System.out.println("Top Popped using pop()");
-
-        System.out.println("Top element of the stack: " + stack.peek());
-        stack.pop();
-        System.out.println("Top Popped using pop()");
-
-        System.out.println("Top of the stack: " + stack.peek());
-        stack.pop();
-        System.out.println("Top Popped using pop()");
-
-        System.out.println("Top of the stack: " + stack.peek());
+        // QUEUE
+        LinkedList queue = new LinkedList();
+        queue.enqueue(56);
+        queue.enqueue(30);
+        queue.enqueue(70);
+        System.out.println("Queue sequence after enqueue operations:");
+        queue.printQueue();
 
     }
 }

@@ -1,32 +1,20 @@
 class LinkedList {
-    Node head;
+    Node head;  // Front of the Queue
+    Node rear;  // Rear of the Queue
 
-    // Acts as push() method for the stack
-    public void add(int data) {
+    public void enqueue(int data) {
         Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
-    }
-    // Pop method for the Stack
-    public void pop() {
-        if (head == null) {
-            System.out.println("Stack is already empty");
+        if (rear == null) {
+            // If the queue is empty, both head and rear point to the new node
+            head = rear = newNode;
             return;
         }
-        head = head.next;
+        rear.next = newNode;  // Link the new node after the current rear
+        rear = newNode;  // Updating the rear
     }
 
-    // Peek method for the Stack
-    public int peek() {
-        if (head == null) {
-            System.out.println("Stack is empty");
-            return -1;
-        }
-        return head.data;
-    }
 
-    // Method to print the Stack
-    public void printStack() {
+    public void printQueue() {
         Node curr = head;
         while (curr != null) {
             System.out.print(curr.data + " ");
