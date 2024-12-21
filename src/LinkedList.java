@@ -13,6 +13,16 @@ class LinkedList {
         rear = newNode;  // Updating the rear
     }
 
+    public void dequeue() {
+        if (head == null) {
+            System.out.println("Queue is Empty");
+            return;
+        }
+        head = head.next;
+        if (head == null) {
+            rear = null;
+        }
+    }
 
     public void printQueue() {
         Node curr = head;

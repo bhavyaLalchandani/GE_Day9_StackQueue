@@ -11,7 +11,10 @@ public class Main {
         queue.enqueue(56);
         queue.enqueue(30);
         queue.enqueue(70);
-        System.out.println("Queue sequence after enqueue operations:");
+        System.out.println("Queue after Enqueue of 3 elements:");
+        queue.printQueue();
+        queue.dequeue();
+        System.out.println("Queue after one Dequeue operation:");
         queue.printQueue();
 
     }
